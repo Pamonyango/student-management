@@ -1,44 +1,44 @@
-import React, { Component } from "react";
+import React from "react";
 
-class signIn extends Component {
+class Student extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      idNumber: null,
-      tscNumber: null
+      admissionNumber: null,
+      class: null
     };
   }
   handleChange = event => {
     event.preventDefault();
     this.setState({
-      idNumber: event.target.name
+      admissionNumber: event.target.name
     });
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    alert(this.state.idNumber);
+    alert(this.state.admissionNumber);
   };
 
   render() {
     return (
       <form action="submit" onSubmit={this.handleSubmit}>
         <fieldset>
-          <legend>Log in</legend>
+          <legend> Enter </legend>
           <label>
-            Id Number:
+            Admission Number:
             <input onChange={this.handleChange} type="number" />
           </label>
           <label>
-            TSC Number:
+            class:
             <input type="number" />
           </label>
         </fieldset>
-        <button type="submit">Log in</button>
+        <button type="submit"> Enter </button>
       </form>
     );
   }
 }
 
-export default signIn;
+export default Student;

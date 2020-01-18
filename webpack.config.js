@@ -22,6 +22,10 @@ module.exports = {
   devtool: "cheap-module-eval-source-map",
   devServer: {
     contentBase: path.join(__dirname, "public"),
-    historyApiFallback: true
+    historyApiFallback: true,
+    stats: "minimal",
+    overlay: true,
+    disableHostCheck: true,
+    headers: { "Access-Control-Allow-Origin": "*" }
   }
 };
