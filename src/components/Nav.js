@@ -1,31 +1,30 @@
 import React from "react";
-import { Link, a, Router } from "react-router-dom";
 
 function Nav() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-info">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <h2>Student Management</h2>
-        </a>
+        </Link>
         <ul className="navbar-nav ml-auhref">
           <li className="nav-item">
-            <a className="nav-link" href="/">
+            <Link className="nav-link" to="/">
               {" "}
               Home{" "}
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/about">
+            <Link className="nav-link" to="/about">
               {" "}
               About
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/contact">
+            <Link className="nav-link" to="/contact">
               {" "}
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
